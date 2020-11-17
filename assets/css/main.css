@@ -2210,7 +2210,7 @@ input, select, textarea {
 		}
 
 		.panel > *.colorsofia {
-			background-image: url("../../images/overlay.png"), linear-gradient(45deg, #778ca3 20%, 60%, #485460);
+			background-image: url("../../images/overlay.png"), linear-gradient(45deg, #ccae62 20%, #778ca3 60%,  #485460);	
 			background-size: 128px 128px, auto;
 		}
 
@@ -2743,7 +2743,12 @@ input, select, textarea {
 		}
 
 		.panel.colorsofia {
-			background-image: url("../../images/overlay.png"), linear-gradient(45deg, #ccae62 20%, #778ca3 60%, #485460);
+			background-image: url("../../images/overlay.png"), linear-gradient(45deg, #ccae62 20%, #778ca3 60%,  #485460);
+			background-size: 128px 128px, auto;
+		}
+
+		.panel.colorsofia2 {
+			background-image: url("../../images/overlay.png"), linear-gradient(45deg, #4b4b4b 20%, #485460 60%,  #778ca3);
 			background-size: 128px 128px, auto;
 		}
 
