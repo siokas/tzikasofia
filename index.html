@@ -12,19 +12,44 @@
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
 	<link rel="icon" type="image/png" href="images/favicon.png" />
-	<style>@media screen and (max-width:600px){.accessibilityimage{width:40px}#slideout{width:289px!important}}#slideout li.disabled{pointer-events:none;opacity:.7}.alignRight{text-align:right!important}.alignLeft{text-align:left!important}.rtl{direction:rtl}.ltr{direction:ltr}.myLogo{width:40px;padding-top:10px}#slideout{position:fixed;top:40px;left:-250px;z-index:10000;direction:rtl;font-size:16px;width:303px}#slideout ul{background-color:#fff;border:1px solid #777;width:248px;text-align:center;padding:20px;float:left}.accessibilityMenuButton{display:block;width:100%;padding:5px;border:1px solid #999;margin-bottom:3px;cursor:pointer;color:#444;background-color:#fff;font-weight:bold}.accessibilityMenuButton:disabled{border:1px solid #ccc;color:#ccc!important;cursor:not-allowed}.accessibilityMenuButton:focus,.accessibilityMenuButton:active{border:1px solid #36f;color:#36f}#slideout2 ul{padding-left:0;padding-right:0;border:1px solid #777;width:250px;padding:20px;z-index:10000;background-color:#fff}.transparentButton{padding:0;background-color:transparent;border:none}.leftContent{margin-top:-38px}@-moz-document url-prefix() {
+  <style>
+  
+  @media screen and (max-width:600px){
+    .accessibilityimage{width:40px}
+    #slideout{width:289px!important}}
+    #slideout li.disabled{pointer-events:none;opacity:.7}
+    .alignRight{text-align:right!important}
+    .alignLeft{text-align:left!important}
+    .rtl{direction:rtl}
+    .ltr{direction:ltr}
+    .myLogo{width:40px;padding-top:10px}
+    #slideout{position:fixed;top:40px;left:-250px;z-index:10000;direction:rtl;font-size:16px;width:303px}#slideout ul{background-color:#fff;border:1px solid #777;width:248px;text-align:center;padding:20px;float:left}.accessibilityMenuButton{display:block;width:100%;padding:5px;border:1px solid #999;margin-bottom:3px;cursor:pointer;color:#444;background-color:#fff;font-weight:bold}.accessibilityMenuButton:disabled{border:1px solid #ccc;color:#ccc!important;cursor:not-allowed}.accessibilityMenuButton:focus,.accessibilityMenuButton:active{border:1px solid #36f;color:#36f}#slideout2 ul{padding-left:0;padding-right:0;border:1px solid #777;width:250px;padding:20px;z-index:10000;background-color:#fff}.transparentButton{padding:0;background-color:transparent;border:none}.leftContent{margin-top:-38px}@-moz-document url-prefix() {
 		#btnGrayscaleOn,
 		#btnGrayscaleOff {
 			display: none;
-		}
-	}</style>
+    }
+  }
+
+  .espa{
+      top:0;
+      right:0;
+    }
+    
+    @media only screen and (max-width:600px){
+      .espa{
+        top:50px; 
+        left:0; 
+      }
+    }
+  
+  </style>
   </head>
 
   <body class="is-preload">
 
-	<a href="espa.pdf" target="_blank"><img src="images/espa.jpg" width="100" alt="espa" style="position:fixed; top:0; right:0;"></a>
+	<a href="espa.pdf" target="_blank" ><img src="images/espa.jpg" width="100" alt="espa" class="espa" style="position:fixed; z-index: 999;"></a>
 
-    <div id="slideout" style="left: -250px; top:0;">
+    <div id="slideout" style="right: -250px; top:0;">
       <button
         class="transparentButton pull-left"
         onclick="toggleAccessibilityMenu()"
@@ -183,7 +208,7 @@
           <div class="image filtered span-3-75" data-position="10% 40%">
             <img
               style="opacity: 0.5"
-              src="https://www.tzikasofia.gr/wp-content/uploads/2020/11/124265723_1609184772626211_1230455311444917580_n-2.jpg"
+              src="images/4.jpg"
               alt="image5"
             />
           </div>
