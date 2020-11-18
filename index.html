@@ -45,7 +45,7 @@
   </style>
   </head>
 
-  <body class="is-preload">
+  <body class="is-preload" onload="getDate()">
 
 	<a href="espa.pdf" target="_blank" ><img src="images/espa.jpg" width="100" alt="espa" class="espa" style="position:fixed; z-index: 999;"></a>
 
@@ -342,12 +342,16 @@
         </section>
 
         <!-- Copyright -->
-        <div class="copyright">2021 &copy; Tzika Sophia</div>
+        <div class="copyright">2021 &copy; instaclick</div>
       </div>
     </div>
 
 	<!-- Scripts -->
 	<script>
+    function getDate(){
+      document.querySelector(".copyright").innerHTML = new Date().getFullYear() + ' © instaclik'
+    }
+
 		function toggleAccessibilityMenu() {
 			var open = document.getElementById("slideout").style.left;
 			if (open === "0px")
