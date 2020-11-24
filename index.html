@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="el">
   <head>
     <title>Τζίκα Σοφία - Ψυχολόγος MSc - Ψυχοθεραπεύτρια</title>
     <meta charset="utf-8" />
-    <meta
+    <!-- <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
-    />
+    /> -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
@@ -41,11 +41,23 @@
         left:0; 
       }
     }
+
+    .greyscale{
+      filter: grayscale(1);
+    }
+
+    .contrast{
+      filter: contrast(5);
+    }
+
+    .underline-links{
+      text-decoration: underline;
+    }
   
   </style>
   </head>
 
-  <body class="is-preload" onload="getDate()">
+  <body class="is-preload" onload="getDate()" style="font-size: 1rem;">
 
 	<a href="espa.pdf" target="_blank" ><img src="images/espa.jpg" width="100" alt="espa" class="espa" style="position:fixed; z-index: 999;"></a>
 
@@ -329,7 +341,7 @@
           </div>
         </section>
 
-        <section class="panel">
+        <!-- <section class="panel">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3072.446329188742!2d22.411551515372395!3d39.639668679463085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13588896d16319ef%3A0xe4d7bbf552c24630!2sManolaki%2013%2C%20Larisa%20412%2022!5e0!3m2!1sen!2sgr!4v1605627582168!5m2!1sen!2sgr"
             width="600"
@@ -339,7 +351,7 @@
             aria-hidden="false"
             tabindex="0"
           ></iframe>
-        </section>
+        </section> -->
 
         <!-- Copyright -->
         <div class="copyright">2021 &copy; instaclick</div>
@@ -348,6 +360,79 @@
 
 	<!-- Scripts -->
 	<script>
+
+  function ToggleUnderlineLinks(underline){
+        var btnLinksOn = document.getElementById("btnLinksOnOn");
+        var btnLinksOn = document.getElementById("btnLinksOnOff");
+        var links = document.getElementsByTagName('a'); 
+        console.log(links)
+        if(underline){
+          for(var i = 0; i < links.length; i++) {
+            links[i].classList.add("underline-links");
+            btnLinksOn.classList.add("disabled");
+            btnLinksOff.classList.remove("disabled");
+          }
+        }else{
+          for(var i = 0; i < links.length; i++) {
+            links[i].classList.remove("underline-links");
+            btnLinksOff.classList.add("disabled");
+            btnLinksOn.classList.remove("disabled");
+          }
+        }
+      }
+    
+    function ToggleGrayscaleMode(high){
+      var btnGrayscaleOn = document.getElementById("btnGrayscaleOn");
+      var btnGrayscaleOff = document.getElementById("btnGrayscaleOff");
+      var images = document.getElementsByTagName('img'); 
+      if(high){
+        for(var i = 0; i < images.length; i++) {
+          images[i].classList.add("greyscale");
+          btnGrayscaleOn.classList.add("disabled");
+          btnGrayscaleOff.classList.remove("disabled");
+        }
+      }else{
+        for(var i = 0; i < images.length; i++) {
+          images[i].classList.remove("greyscale");
+          btnGrayscaleOff.classList.add("disabled");
+          btnGrayscaleOn.classList.remove("disabled");
+        }
+      }
+    }
+
+    function ToggleHighContrastMode(high){
+      var btnHighContrastOn = document.getElementById("btnHighContrastOn");
+      var btnHighContrastOff = document.getElementById("btnHighContrastOff");
+      var images = document.getElementsByTagName('img'); 
+      if(high){
+        for(var i = 0; i < images.length; i++) {
+          images[i].classList.add("contrast");
+          btnHighContrastOn.classList.add("disabled");
+          btnHighContrastOff.classList.remove("disabled");
+        }
+      }else{
+        for(var i = 0; i < images.length; i++) {
+          images[i].classList.remove("contrast");
+          btnHighContrastOff.classList.add("disabled");
+          btnHighContrastOn.classList.remove("disabled");
+        }
+      }
+    }
+
+    function setTextSize(big){
+      var body = document.getElementsByTagName("BODY")[0];
+      var btnTextSizeOn = document.getElementById("btnTextSizeOn");
+      var btnTextSizeOff = document.getElementById("btnTextSizeOff");
+      if(big){
+        body.style.fontSize = '2rem';
+        btnTextSizeOn.classList.add("disabled");
+        btnTextSizeOff.classList.remove("disabled");
+      }else{
+        body.style.fontSize = '1rem';
+        btnTextSizeOff.classList.add("disabled");
+        btnTextSizeOn.classList.remove("disabled");
+      }
+    }
     function getDate(){
       document.querySelector(".copyright").innerHTML = new Date().getFullYear() + ' © instaclik'
     }
